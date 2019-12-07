@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mother_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_rounder_layout" />
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/bg_rounder_layout"
+        android:visibility="gone" />
+
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginBottom="50dp">-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/upIndicator"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:src="@drawable/ic_up" />-->
+
+<!--        </RelativeLayout>-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_alignParentBottom="true">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/downIndicator"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:src="@drawable/ic_down" />-->
+
+<!--        </RelativeLayout>-->
+
+<!--    </RelativeLayout>-->
+
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginTop="50dp">-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/rightIndicator"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:src="@drawable/ic_right" />-->
+
+<!--        </RelativeLayout>-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_alignParentBottom="true">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/leftIndicator"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:src="@drawable/ic_left" />-->
+
+<!--        </RelativeLayout>-->
+
+
+<!--    </RelativeLayout>-->
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true">
+        <io.github.controlwear.virtual.joystick.android.JoystickView
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/joystick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            custom:JV_buttonColor="#FF6E40"
+            custom:JV_buttonSizeRatio="15%"
+            custom:JV_borderColor="#00796B"
+            custom:JV_backgroundColor="#009688"
+            custom:JV_borderWidth="4dp"
+            custom:JV_fixedCenter="false"/>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

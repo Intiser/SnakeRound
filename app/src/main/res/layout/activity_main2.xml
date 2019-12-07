@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mother_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity">
+
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/layout"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:background="@drawable/bg_rounder_layout" />-->
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_marginLeft="100dp"-->
+<!--        android:layout_marginTop="250dp"-->
+<!--        android:background="@drawable/bg_rounder_layout"-->
+<!--        android:visibility="gone" />-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <project.ahsan.language.com.myapplication.view.CustomView
+            android:id="@+id/customview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true">
+        <io.github.controlwear.virtual.joystick.android.JoystickView
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/joystick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            custom:JV_buttonColor="#FF6E40"
+            custom:JV_buttonSizeRatio="15%"
+            custom:JV_borderColor="#00796B"
+            custom:JV_backgroundColor="#009688"
+            custom:JV_borderWidth="4dp"
+            custom:JV_fixedCenter="false"/>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
