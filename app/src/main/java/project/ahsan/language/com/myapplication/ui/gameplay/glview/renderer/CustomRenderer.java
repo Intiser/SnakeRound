@@ -21,28 +21,32 @@ import project.ahsan.language.com.myapplication.ui.gameplay.glview.utility.RawRe
 public class CustomRenderer implements GLSurfaceView.Renderer {
 
     private final Context mActivityContext;
+
+    // uniform variable of shader files
     private Point point;
     private float radius;
 
+    // all handles
     int programHandle;
     private int mPositionHandle;
     private int mTextureCordinateHandle;
     private int mPointHandle;
     private int mRadiusHandle;
 
+    // data sizes
     private final int mPositionDataSize = 3;
     private final int mTextureCoordinateDataSize = 2;
     private final int mBytesPerFloat = 4;
 
-
+    // matrixes
     private float[] mViewMatrix = new float[16];
-
     private float[] mProjectionMatrix = new float[16];
 
+    // data buffers
     private final FloatBuffer mSquareTextures;
-
     private final FloatBuffer mSquarePositions;
 
+    // point datas
     float[] squarePositionData = {
             -1.0f, 1.0f, 0.0f,
             -1.0f, -1.0f, 0.0f,
@@ -57,14 +61,14 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
             1.0f, 1.0f,
     };
 
+    // internal variables
     float screenWidth;
     float screenHeight;
 
 
-
-    public CustomRenderer(Context context, float width, float height){
+    public CustomRenderer(Context context, float width, float height) {
         mActivityContext = context;
-        point = new Point(width/2, height/2);
+        point = new Point(width / 2, height / 2);
         radius = (float) 50;
         this.screenHeight = height;
         this.screenWidth = width;
@@ -212,8 +216,8 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
 
         mPositionHandle = GLES20.glGetAttribLocation(programHandle, "a_Position");
         mTextureCordinateHandle = GLES20.glGetAttribLocation(programHandle, "a_TexCoordinate");
-        mPointHandle    = GLES20.glGetUniformLocation(programHandle, "point");
-        mRadiusHandle    = GLES20.glGetUniformLocation(programHandle, "radius");
+        mPointHandle = GLES20.glGetUniformLocation(programHandle, "point");
+        mRadiusHandle = GLES20.glGetUniformLocation(programHandle, "radius");
 
         GLES20.glUseProgram(programHandle);
 
@@ -251,7 +255,7 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
 
         GLES20.glUniform1f(mRadiusHandle, radius);
         float[] pos1 = {(float) point.getX(), (float) point.getY()};
-        GLES20.glUniform2fv(mPointHandle,0,pos1,0);
+        GLES20.glUniform2fv(mPointHandle, 0, pos1, 0);
 
         drawSquare();
         GLES20.glFinish();
@@ -283,7 +287,7 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
         return RawResourceReader.readTextFileFromRawResource(mActivityContext, R.raw.fragment_shader);
     }
 
-    public void setPoint(Point point){
+    public void setPoint(Point point) {
         this.point = point;
     }
 

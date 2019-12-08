@@ -1,6 +1,8 @@
 package project.ahsan.language.com.myapplication.ui.gameplay;
 
 import androidx.appcompat.app.AppCompatActivity;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import io.github.controlwear.virtual.joystick.android.JoystickView;
 import project.ahsan.language.com.myapplication.R;
 import project.ahsan.language.com.myapplication.ui.gameplay.glview.model.Point;
@@ -15,27 +17,24 @@ import android.widget.RelativeLayout;
 public class GamePlayActivity extends AppCompatActivity {
 
 
+    @BindView(R.id.joystick)
     JoystickView joystickView;
+
+    @BindView(R.id.customview)
     CustomView customView;
 
     PlayController playController;
-
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        init();
+        ButterKnife.bind(this);
         initController();
     }
 
-    private void init(){
-        customView = findViewById(R.id.customview);
-        joystickView = findViewById(R.id.joystick);
-    }
-
-    private void initController(){
+    private void initController() {
         playController = new PlayController(joystickView, customView, this);
     }
 

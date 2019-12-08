@@ -15,8 +15,6 @@ public class SampleActivity extends AppCompatActivity {
     RelativeLayout motherLayout;
 
 
-
-
     JoystickView joystickView;
 
     double nowX = 480.0;
@@ -38,20 +36,19 @@ public class SampleActivity extends AppCompatActivity {
     }
 
     private void initJoystickView() {
-       joystickView = findViewById(R.id.joystick);
-       joystickView.setOnMoveListener(new JoystickView.OnMoveListener() {
-           @Override
-           public void onMove(int angle, int strength) {
-               Log.d("TAG", "onMove: " + (angle+ 90 )%360+ " degree " + strength);
-               nowX = nowX + GeometryUtils.getXcaculated((angle + 90)%360, strength);
-               nowY = nowY + GeometryUtils.getYcaculated((angle + 90)%360, strength);
-               Log.d("TAG", "onMove: " + nowX + " nowY " + nowY);
-               relativeLayout.setX((float) nowX);
-               relativeLayout.setY((float) nowY);
-           }
-       });
+        joystickView = findViewById(R.id.joystick);
+        joystickView.setOnMoveListener(new JoystickView.OnMoveListener() {
+            @Override
+            public void onMove(int angle, int strength) {
+                Log.d("TAG", "onMove: " + (angle + 90) % 360 + " degree " + strength);
+                nowX = nowX + GeometryUtils.getXcaculated((angle + 90) % 360, strength);
+                nowY = nowY + GeometryUtils.getYcaculated((angle + 90) % 360, strength);
+                Log.d("TAG", "onMove: " + nowX + " nowY " + nowY);
+                relativeLayout.setX((float) nowX);
+                relativeLayout.setY((float) nowY);
+            }
+        });
     }
-
 
 
     private void initLayouts() {
@@ -62,8 +59,6 @@ public class SampleActivity extends AppCompatActivity {
         nowX = 480.0;
         nowY = 912.0;
     }
-
-
 
 
 }

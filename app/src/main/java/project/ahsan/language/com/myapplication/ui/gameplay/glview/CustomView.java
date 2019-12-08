@@ -26,16 +26,16 @@ public class CustomView extends GLSurfaceView {
     }
 
 
-    private void iniRenderer(){
+    private void iniRenderer() {
         setEGLContextClientVersion(2);
-        float width =  mContext.getResources().getDisplayMetrics().widthPixels;
+        float width = mContext.getResources().getDisplayMetrics().widthPixels;
         float height = (float) (mContext.getResources().getDisplayMetrics().heightPixels - ViewUtils.getPixelsFromDP(mContext, 10));
         customRenderer = new CustomRenderer(mContext, width, height);
         setRenderer(customRenderer);
 
     }
 
-    public void setPointToRenderer(Point point){
+    public void setPointToRenderer(Point point) {
         customRenderer.setPoint(point);
     }
 

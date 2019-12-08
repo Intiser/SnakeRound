@@ -44,13 +44,13 @@ public class PlayController {
         joystickView.setOnMoveListener(new JoystickView.OnMoveListener() {
             @Override
             public void onMove(int angle, int strength) {
-                Log.d("TAG", "onMove2: " + (angle+ 90 )%360+ " degree " + strength);
-                nowX = nowX + GeometryUtils.getXcaculated((angle + 90)%360, strength);
-                nowY = nowY + GeometryUtils.getYcaculated((angle + 90)%360, strength);
-                if(nowX < 50) nowX = 50;
-                if(nowY < 50) nowY = 50;
-                if(nowX > deviceWidth-50) nowX =  deviceWidth-50;
-                if(nowY > deviceHeight-50) nowY =  deviceHeight-50;
+                Log.d("TAG", "onMove2: " + (angle + 90) % 360 + " degree " + strength);
+                nowX = nowX + GeometryUtils.getXcaculated((angle + 90) % 360, strength);
+                nowY = nowY + GeometryUtils.getYcaculated((angle + 90) % 360, strength);
+                if (nowX < 50) nowX = 50;
+                if (nowY < 50) nowY = 50;
+                if (nowX > deviceWidth - 50) nowX = deviceWidth - 50;
+                if (nowY > deviceHeight - 50) nowY = deviceHeight - 50;
 
                 Log.d("TAG", "onMove2: " + nowX + " nowY " + nowY);
                 //relativeLayout.setX((float) nowX);
@@ -59,7 +59,7 @@ public class PlayController {
                 customView.queueEvent(new Runnable() {
                     @Override
                     public void run() {
-                        customView.setPointToRenderer(new Point(nowX,nowY));
+                        customView.setPointToRenderer(new Point(nowX, nowY));
                     }
                 });
             }

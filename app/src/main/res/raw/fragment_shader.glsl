@@ -4,6 +4,7 @@ varying highp vec2 v_texCoord; // Texture Coordinate
 uniform highp float radius;
 uniform highp vec2 point;
 
+
 //float abs(float val){
 //    if(val > 0) return val;
 //    return (-1.0 * val);
@@ -19,7 +20,7 @@ highp float getDistance(){
 void main()
 {
 
-    vec4 color = vec4(0.0,1.0,0.0,1.0);
+    vec4 color = vec4(0.0,0.0,0.0,1.0);
     if(getDistance() < radius*radius  ){
         color = vec4(1.0,0,0,1.0);
     }
