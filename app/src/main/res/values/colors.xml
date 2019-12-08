@@ -3,5 +3,22 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="colorBall">#e91e63</color>
+
+    <color name="colorSnake1">#f44336</color>
+    <color name="colorSnake2">#e91e63</color>
+    <color name="colorSnake3">#9c27b0</color>
+    <color name="colorSnake4">#673ab7</color>
+    <color name="colorSnake5">#3f51b5</color>
+    <color name="colorSnake6">#2196f3</color>
+    <color name="colorSnake7">#03a9f4</color>
+    <color name="colorSnake8">#00bcd4</color>
+    <color name="colorSnake9">#009688</color>
+    <color name="colorSnake10">#4caf50</color>
+    <color name="colorSnake11">#8bc34a</color>
+    <color name="colorSnake12">#cddc39</color>
+    <color name="colorSnake13">#ffeb3b</color>
+    <color name="colorSnake14">#ffc107</color>
+    <color name="colorSnake15">#ff9800</color>
+    <color name="colorSnake16">#ff5722</color>
+
 </resources>

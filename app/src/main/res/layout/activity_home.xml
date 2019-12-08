@@ -7,19 +7,96 @@
     tools:context=".ui.home.HomeActivity">
 
     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageView
+            android:id="@+id/settingsImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:src="@drawable/ic_settings" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
         android:id="@+id/playbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:clickable="true"
         android:background="?android:attr/selectableItemBackgroundBorderless"
-        >
+        android:clickable="true">
 
         <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/ic_play"
-            />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_play" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/snakeColorButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:clickable="true">
+
+                        <ImageView
+                            android:id="@+id/imageViewColorPicker"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_color_picker" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageViewColorPicker"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Snake Color"
+                            android:textColor="#000000"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
 
     </RelativeLayout>
 
