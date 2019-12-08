@@ -1,4 +1,4 @@
-package project.ahsan.language.com.myapplication.util;
+package project.ahsan.language.com.myapplication.ui.gameplay.glview.utility;
 
 import android.content.Context;
 

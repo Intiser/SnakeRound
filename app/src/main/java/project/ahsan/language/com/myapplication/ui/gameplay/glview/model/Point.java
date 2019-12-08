@@ -1,4 +1,4 @@
-package project.ahsan.language.com.myapplication.model;
+package project.ahsan.language.com.myapplication.ui.gameplay.glview.model;
 
 public class Point {
     double x;

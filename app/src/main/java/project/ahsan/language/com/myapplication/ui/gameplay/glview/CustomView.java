@@ -1,12 +1,12 @@
-package project.ahsan.language.com.myapplication.view;
+package project.ahsan.language.com.myapplication.ui.gameplay.glview;
 
 import android.content.Context;
 import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
 
-import project.ahsan.language.com.myapplication.model.Point;
-import project.ahsan.language.com.myapplication.renderer.CustomRenderer;
-import project.ahsan.language.com.myapplication.utility.ViewUtils;
+import project.ahsan.language.com.myapplication.ui.gameplay.glview.model.Point;
+import project.ahsan.language.com.myapplication.ui.gameplay.glview.renderer.CustomRenderer;
+import project.ahsan.language.com.myapplication.ui.gameplay.glview.utility.ViewUtils;
 
 public class CustomView extends GLSurfaceView {
 

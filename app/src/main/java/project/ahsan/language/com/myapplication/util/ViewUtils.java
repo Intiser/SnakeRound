@@ -1,4 +1,4 @@
-package project.ahsan.language.com.myapplication.utility;
+package project.ahsan.language.com.myapplication.util;
 
 import android.content.Context;
 

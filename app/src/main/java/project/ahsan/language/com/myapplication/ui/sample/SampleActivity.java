@@ -1,14 +1,15 @@
-package project.ahsan.language.com.myapplication;
+package project.ahsan.language.com.myapplication.ui.sample;
 
 import androidx.appcompat.app.AppCompatActivity;
 import io.github.controlwear.virtual.joystick.android.JoystickView;
-import project.ahsan.language.com.myapplication.utility.GeometryUtils;
+import project.ahsan.language.com.myapplication.R;
+import project.ahsan.language.com.myapplication.ui.gameplay.glview.utility.GeometryUtils;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.RelativeLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class SampleActivity extends AppCompatActivity {
 
     RelativeLayout relativeLayout;
     RelativeLayout motherLayout;

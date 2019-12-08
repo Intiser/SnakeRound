@@ -1,4 +1,4 @@
-package project.ahsan.language.com.myapplication.renderer;
+package project.ahsan.language.com.myapplication.ui.gameplay.glview.renderer;
 
 import android.content.Context;
 import android.opengl.GLES20;
@@ -15,8 +15,8 @@ import javax.microedition.khronos.opengles.GL10;
 
 
 import project.ahsan.language.com.myapplication.R;
-import project.ahsan.language.com.myapplication.model.Point;
-import project.ahsan.language.com.myapplication.util.RawResourceReader;
+import project.ahsan.language.com.myapplication.ui.gameplay.glview.model.Point;
+import project.ahsan.language.com.myapplication.ui.gameplay.glview.utility.RawResourceReader;
 
 public class CustomRenderer implements GLSurfaceView.Renderer {
 

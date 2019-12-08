@@ -1,4 +1,4 @@
-package project.ahsan.language.com.myapplication.utility;
+package project.ahsan.language.com.myapplication.ui.gameplay.glview.utility;
 
 public class GeometryUtils {
 
