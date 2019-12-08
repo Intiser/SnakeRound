@@ -10,7 +10,10 @@
         android:id="@+id/playbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
+        android:layout_centerInParent="true"
+        android:clickable="true"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        >
 
         <ImageView
             android:layout_width="80dp"
