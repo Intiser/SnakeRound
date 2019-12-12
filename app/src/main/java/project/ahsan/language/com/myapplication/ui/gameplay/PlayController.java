@@ -34,7 +34,7 @@ public class PlayController {
     private void init() {
         deviceWidth = context.getResources().getDisplayMetrics().widthPixels;
 
-        deviceHeight = context.getResources().getDisplayMetrics().heightPixels - ViewUtils.getPixelsFromDP(context, 16);
+        deviceHeight = context.getResources().getDisplayMetrics().heightPixels;
         nowX = deviceWidth / 2;
         nowY = deviceHeight / 2;
     }

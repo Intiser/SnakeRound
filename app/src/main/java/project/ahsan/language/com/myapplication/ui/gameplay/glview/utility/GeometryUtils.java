@@ -2,7 +2,7 @@ package project.ahsan.language.com.myapplication.ui.gameplay.glview.utility;
 
 public class GeometryUtils {
 
-    private static double distance = 50.0;
+    private static double distance = 25.0;
 
     public static double getXcaculated(double angle, double speed) {
         double radian = Math.toRadians(angle);

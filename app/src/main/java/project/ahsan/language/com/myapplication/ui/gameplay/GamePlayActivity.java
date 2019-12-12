@@ -10,8 +10,10 @@ import project.ahsan.language.com.myapplication.ui.gameplay.glview.utility.Geome
 import project.ahsan.language.com.myapplication.ui.gameplay.glview.utility.ViewUtils;
 import project.ahsan.language.com.myapplication.ui.gameplay.glview.CustomView;
 
+import android.app.ActionBar;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.RelativeLayout;
 
 public class GamePlayActivity extends AppCompatActivity {
@@ -34,8 +36,30 @@ public class GamePlayActivity extends AppCompatActivity {
         initController();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
+
     private void initController() {
         playController = new PlayController(joystickView, customView, this);
+    }
+
+    private void makeFullscreen(){
+        View decorView = getWindow().getDecorView();
+        // Hide the status bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+        // Remember that you should never show the action bar if the
+        // status bar is hidden, so hide that too if necessary.
+
     }
 
 

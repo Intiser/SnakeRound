@@ -31,6 +31,7 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
     private int mPositionHandle;
     private int mTextureCordinateHandle;
     private int mPointHandle;
+    private int mFoodPointHandle;
     private int mRadiusHandle;
 
     // data sizes
@@ -216,7 +217,8 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
 
         mPositionHandle = GLES20.glGetAttribLocation(programHandle, "a_Position");
         mTextureCordinateHandle = GLES20.glGetAttribLocation(programHandle, "a_TexCoordinate");
-        mPointHandle = GLES20.glGetUniformLocation(programHandle, "point");
+        mPointHandle = GLES20.glGetUniformLocation(programHandle, "control_point");
+        mFoodPointHandle = GLES20.glGetUniformLocation(programHandle, "food_point");
         mRadiusHandle = GLES20.glGetUniformLocation(programHandle, "radius");
 
         GLES20.glUseProgram(programHandle);
@@ -256,6 +258,8 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
         GLES20.glUniform1f(mRadiusHandle, radius);
         float[] pos1 = {(float) point.getX(), (float) point.getY()};
         GLES20.glUniform2fv(mPointHandle, 0, pos1, 0);
+        float[] pos2 = {(float) (screenWidth * 1.0)/2, (float) (screenHeight * 1.0)/2};
+        GLES20.glUniform2fv(mFoodPointHandle, 0, pos2, 0);
 
         drawSquare();
         GLES20.glFinish();
