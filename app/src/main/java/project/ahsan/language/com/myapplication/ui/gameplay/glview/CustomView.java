@@ -30,7 +30,7 @@ public class CustomView extends GLSurfaceView {
     private void iniRenderer() {
         setEGLContextClientVersion(2);
         float width = mContext.getResources().getDisplayMetrics().widthPixels;
-        float height = (float) (mContext.getResources().getDisplayMetrics().heightPixels );
+        float height = (float) (mContext.getResources().getDisplayMetrics().heightPixels - ViewUtils.getPixelsFromDP(mContext,16));
         customRenderer = new CustomRenderer(mContext, width, height);
         setRenderer(customRenderer);
 
@@ -44,6 +44,10 @@ public class CustomView extends GLSurfaceView {
     public void setFoodPointsToRenderer(Point point) {
         customRenderer.setFoodPoint(point);
 
+    }
+
+    public void setRadiusOfFood(double radius){
+        customRenderer.setRadius(radius);
     }
 
 }

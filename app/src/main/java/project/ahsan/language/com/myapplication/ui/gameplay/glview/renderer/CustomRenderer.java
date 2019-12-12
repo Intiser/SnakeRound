@@ -301,4 +301,8 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
         this.foodPoint = point;
     }
 
+    public void setRadius(double radius){
+        this.radius = (float) radius;
+    }
+
 }
