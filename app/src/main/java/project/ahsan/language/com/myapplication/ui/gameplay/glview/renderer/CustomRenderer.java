@@ -24,6 +24,7 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
 
     // uniform variable of shader files
     private Point point;
+    private Point foodPoint;
     private float radius;
 
     // all handles
@@ -70,6 +71,7 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
     public CustomRenderer(Context context, float width, float height) {
         mActivityContext = context;
         point = new Point(width / 2, height / 2);
+        foodPoint = new Point(width/4, height/4);
         radius = (float) 50;
         this.screenHeight = height;
         this.screenWidth = width;
@@ -258,7 +260,7 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
         GLES20.glUniform1f(mRadiusHandle, radius);
         float[] pos1 = {(float) point.getX(), (float) point.getY()};
         GLES20.glUniform2fv(mPointHandle, 0, pos1, 0);
-        float[] pos2 = {(float) (screenWidth * 1.0)/2, (float) (screenHeight * 1.0)/2};
+        float[] pos2 = {(float) foodPoint.getX(), (float) foodPoint.getY()};
         GLES20.glUniform2fv(mFoodPointHandle, 0, pos2, 0);
 
         drawSquare();
@@ -293,6 +295,10 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
 
     public void setPoint(Point point) {
         this.point = point;
+    }
+
+    public void setFoodPoint(Point point){
+        this.foodPoint = point;
     }
 
 }

@@ -13,6 +13,7 @@ public class CustomView extends GLSurfaceView {
     CustomRenderer customRenderer;
     Context mContext;
 
+
     public CustomView(Context context) {
         super(context);
         mContext = context;
@@ -35,8 +36,14 @@ public class CustomView extends GLSurfaceView {
 
     }
 
-    public void setPointToRenderer(Point point) {
+    public void setPointsToRenderer(Point point) {
         customRenderer.setPoint(point);
+
+    }
+
+    public void setFoodPointsToRenderer(Point point) {
+        customRenderer.setFoodPoint(point);
+
     }
 
 }

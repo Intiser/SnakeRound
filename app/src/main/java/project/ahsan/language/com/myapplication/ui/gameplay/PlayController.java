@@ -4,11 +4,9 @@ import android.content.Context;
 import android.util.Log;
 
 import io.github.controlwear.virtual.joystick.android.JoystickView;
-import project.ahsan.language.com.myapplication.R;
 import project.ahsan.language.com.myapplication.ui.gameplay.glview.CustomView;
 import project.ahsan.language.com.myapplication.ui.gameplay.glview.model.Point;
 import project.ahsan.language.com.myapplication.ui.gameplay.glview.utility.GeometryUtils;
-import project.ahsan.language.com.myapplication.ui.gameplay.glview.utility.ViewUtils;
 
 public class PlayController {
 
@@ -17,6 +15,8 @@ public class PlayController {
 
     private double deviceWidth;
     private double deviceHeight;
+
+    Point foodPoint;
 
     private JoystickView joystickView;
     private CustomView customView;
@@ -37,6 +37,8 @@ public class PlayController {
         deviceHeight = context.getResources().getDisplayMetrics().heightPixels;
         nowX = deviceWidth / 2;
         nowY = deviceHeight / 2;
+        foodPoint = new Point(deviceWidth/4, deviceHeight/4);
+        updateFoodPoint(foodPoint);
     }
 
 
@@ -56,15 +58,40 @@ public class PlayController {
                 Log.d("TAG", "onMove2: " + nowX + " nowY " + nowY);
                 //relativeLayout.setX((float) nowX);
                 //relativeLayout.setY((float) nowY);
+                double dis = GeometryUtils.getDistance(foodPoint.getX(),foodPoint.getY(), nowX, nowY);
+
+                if(dis < 20){
+                    foodPoint = makenewPoint();
+                    updateFoodPoint(foodPoint);
+                }
+
 
                 customView.queueEvent(new Runnable() {
                     @Override
                     public void run() {
-                        customView.setPointToRenderer(new Point(nowX, nowY));
+                        customView.setPointsToRenderer(new Point(nowX, nowY));
                     }
                 });
+
+
             }
         });
+    }
+
+    private void updateFoodPoint(Point point){
+        customView.queueEvent(new Runnable() {
+            @Override
+            public void run() {
+                customView.setFoodPointsToRenderer(point);
+            }
+        });
+    }
+
+    private Point makenewPoint(){
+        double x =  ( (Math.random()%deviceWidth) * deviceWidth);
+        double y =  ( (Math.random()%deviceHeight) * deviceHeight);
+        Point point = new Point(x,y);
+        return point;
     }
 
 }
