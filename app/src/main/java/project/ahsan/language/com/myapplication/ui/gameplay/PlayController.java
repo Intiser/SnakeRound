@@ -54,8 +54,8 @@ public class PlayController {
                 Log.d("TAG", "onMove2: " + (angle + 90) % 360 + " degree " + strength);
                 nowX = nowX + GeometryUtils.getXcaculated((angle + 90) % 360, strength);
                 nowY = nowY + GeometryUtils.getYcaculated((angle + 90) % 360, strength);
-                if (nowX < 50) nowX = radius;
-                if (nowY < 50) nowY = radius;
+                if (nowX <  radius) nowX = radius;
+                if (nowY <  radius) nowY = radius;
                 if (nowX > deviceWidth - radius) nowX = deviceWidth - radius;
                 if (nowY > deviceHeight - radius) nowY = deviceHeight - radius;
 
@@ -65,8 +65,8 @@ public class PlayController {
                 double dis = GeometryUtils.getDistance(foodPoint.getX(),foodPoint.getY(), nowX, nowY);
 
                 if(dis < 20){
-                    foodPoint = makenewPoint();
                     radius = radius + 10;
+                    foodPoint = makenewPoint();
                     updateFoodPointAndRadius(foodPoint, radius);
                 }
 
@@ -94,9 +94,11 @@ public class PlayController {
     }
 
     private Point makenewPoint(){
-        double x =  ( (Math.random()%deviceWidth) * deviceWidth);
-        double y =  ( (Math.random()%deviceHeight) * deviceHeight);
-        Point point = new Point(x,y);
+        double width  = deviceWidth - 2*radius;
+        double height = deviceHeight - 2*radius;
+        double x =  ( (Math.random()%width) * width);
+        double y =  ( (Math.random()%height) * height);
+        Point point = new Point(x + radius,y + radius);
         return point;
     }
 
