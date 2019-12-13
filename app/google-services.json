@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "497667266517",
+    "firebase_url": "https://roundsnake-e4188.firebaseio.com",
+    "project_id": "roundsnake-e4188",
+    "storage_bucket": "roundsnake-e4188.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497667266517:android:50d647022e645db08f0f5c",
+        "android_client_info": {
+          "package_name": "project.ahsan.language.com.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "497667266517-pgjk3obeum502cd630enjiu36figpjb7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "project.ahsan.language.com.myapplication",
+            "certificate_hash": "b510daeaf2bb3769afb43c984ee9ce541f629467"
+          }
+        },
+        {
+          "client_id": "497667266517-7usd1o7fc7feogj7efjokpr76kg81ivu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVNqTwCxEmvOTHx3eLGKcYUDdjsMVSrPo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "497667266517-7usd1o7fc7feogj7efjokpr76kg81ivu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
