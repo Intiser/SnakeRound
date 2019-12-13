@@ -20,6 +20,8 @@ public class PlayController {
     Point foodPoint;
     double radius;
 
+    double difference;
+
     private JoystickView joystickView;
     private CustomView customView;
 
@@ -35,12 +37,12 @@ public class PlayController {
 
     private void init() {
         deviceWidth = context.getResources().getDisplayMetrics().widthPixels;
-
         deviceHeight = context.getResources().getDisplayMetrics().heightPixels - ViewUtils.getPixelsFromDP(context, 16);
         nowX = deviceWidth / 2;
         nowY = deviceHeight / 2;
-        foodPoint = new Point(deviceWidth/4, deviceHeight/4);
+        foodPoint = makenewPoint();
         radius = 50.0;
+        difference = 20.0;
         updateFoodPointAndRadius(foodPoint, radius);
 
     }
@@ -64,7 +66,7 @@ public class PlayController {
                 //relativeLayout.setY((float) nowY);
                 double dis = GeometryUtils.getDistance(foodPoint.getX(),foodPoint.getY(), nowX, nowY);
 
-                if(dis < 20){
+                if(dis < difference){
                     radius = radius + 10;
                     foodPoint = makenewPoint();
                     updateFoodPointAndRadius(foodPoint, radius);
