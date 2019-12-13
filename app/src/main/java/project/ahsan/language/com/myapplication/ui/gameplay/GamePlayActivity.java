@@ -5,16 +5,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.github.controlwear.virtual.joystick.android.JoystickView;
 import project.ahsan.language.com.myapplication.R;
-import project.ahsan.language.com.myapplication.ui.gameplay.glview.model.Point;
-import project.ahsan.language.com.myapplication.ui.gameplay.glview.utility.GeometryUtils;
-import project.ahsan.language.com.myapplication.ui.gameplay.glview.utility.ViewUtils;
+import project.ahsan.language.com.myapplication.ui.gameplay.controler.PlayController;
 import project.ahsan.language.com.myapplication.ui.gameplay.glview.CustomView;
 
-import android.app.ActionBar;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.RelativeLayout;
 
 public class GamePlayActivity extends AppCompatActivity {
 

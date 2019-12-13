@@ -42,16 +42,28 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_alignParentBottom="true">
+
+<!--        <io.github.controlwear.virtual.joystick.android.JoystickView-->
+<!--            xmlns:custom="http://schemas.android.com/apk/res-auto"-->
+<!--            android:id="@+id/joystick"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            custom:JV_buttonColor="#FF6E40"-->
+<!--            custom:JV_buttonSizeRatio="15%"-->
+<!--            custom:JV_borderColor="#00796B"-->
+<!--            custom:JV_backgroundColor="#009688"-->
+<!--            custom:JV_borderWidth="4dp"-->
+<!--            custom:JV_fixedCenter="false"/>-->
         <io.github.controlwear.virtual.joystick.android.JoystickView
             xmlns:custom="http://schemas.android.com/apk/res-auto"
             android:id="@+id/joystick"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            custom:JV_buttonColor="#FF6E40"
-            custom:JV_buttonSizeRatio="15%"
+            custom:JV_buttonColor="#18ffff"
+            custom:JV_buttonSizeRatio="20%"
             custom:JV_borderColor="#00796B"
-            custom:JV_backgroundColor="#009688"
-            custom:JV_borderWidth="4dp"
+            custom:JV_backgroundColor="#33009688"
+            custom:JV_borderWidth="0dp"
             custom:JV_fixedCenter="false"/>
 
     </RelativeLayout>
