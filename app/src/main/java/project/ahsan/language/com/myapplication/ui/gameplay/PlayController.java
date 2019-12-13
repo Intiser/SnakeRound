@@ -21,6 +21,7 @@ public class PlayController {
     double radius;
 
     double difference;
+    double border;
 
     private JoystickView joystickView;
     private CustomView customView;
@@ -40,10 +41,17 @@ public class PlayController {
         deviceHeight = context.getResources().getDisplayMetrics().heightPixels - ViewUtils.getPixelsFromDP(context, 16);
         nowX = deviceWidth / 2;
         nowY = deviceHeight / 2;
-        foodPoint = makenewPoint();
+        border = 10.0;
         radius = 50.0;
         difference = 20.0;
+        foodPoint = makenewPoint();
         updateFoodPointAndRadius(foodPoint, radius);
+        customView.queueEvent(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        });
 
     }
 
@@ -56,17 +64,18 @@ public class PlayController {
                 Log.d("TAG", "onMove2: " + (angle + 90) % 360 + " degree " + strength);
                 nowX = nowX + GeometryUtils.getXcaculated((angle + 90) % 360, strength);
                 nowY = nowY + GeometryUtils.getYcaculated((angle + 90) % 360, strength);
-                if (nowX <  radius) nowX = radius;
-                if (nowY <  radius) nowY = radius;
-                if (nowX > deviceWidth - radius) nowX = deviceWidth - radius;
-                if (nowY > deviceHeight - radius) nowY = deviceHeight - radius;
+                double radbod = (radius + border);
+                if (nowX < radbod) nowX = radbod;
+                if (nowY < radbod) nowY = radbod;
+                if (nowX > deviceWidth - radbod) nowX = deviceWidth - radbod;
+                if (nowY > deviceHeight - radbod) nowY = deviceHeight - radbod;
 
                 Log.d("TAG", "onMove2: " + nowX + " nowY " + nowY);
                 //relativeLayout.setX((float) nowX);
                 //relativeLayout.setY((float) nowY);
-                double dis = GeometryUtils.getDistance(foodPoint.getX(),foodPoint.getY(), nowX, nowY);
+                double dis = GeometryUtils.getDistance(foodPoint.getX(), foodPoint.getY(), nowX, nowY);
 
-                if(dis < difference){
+                if (dis < difference) {
                     radius = radius + 10;
                     foodPoint = makenewPoint();
                     updateFoodPointAndRadius(foodPoint, radius);
@@ -85,7 +94,7 @@ public class PlayController {
         });
     }
 
-    private void updateFoodPointAndRadius(Point point,double radius){
+    private void updateFoodPointAndRadius(Point point, double radius) {
         customView.queueEvent(new Runnable() {
             @Override
             public void run() {
@@ -95,12 +104,13 @@ public class PlayController {
         });
     }
 
-    private Point makenewPoint(){
-        double width  = deviceWidth - 2*radius;
-        double height = deviceHeight - 2*radius;
-        double x =  ( (Math.random()%width) * width);
-        double y =  ( (Math.random()%height) * height);
-        Point point = new Point(x + radius,y + radius);
+    private Point makenewPoint() {
+        double radbod = radius + border;
+        double width = deviceWidth - 2 * radbod;
+        double height = deviceHeight - 2 * radbod;
+        double x = ((Math.random() % width) * width);
+        double y = ((Math.random() % height) * height);
+        Point point = new Point(x + radbod, y + radbod);
         return point;
     }
 

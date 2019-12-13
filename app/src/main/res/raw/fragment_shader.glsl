@@ -4,7 +4,10 @@ varying highp vec2 v_texCoord; // Texture Coordinate
 uniform highp float radius;
 uniform highp vec2 control_point;
 uniform highp vec2 food_point;
+uniform highp float border;
 
+uniform highp float devicewidth;
+uniform highp float deviceheight;
 
 //float abs(float val){
 //    if(val > 0) return val;
@@ -30,6 +33,13 @@ void main()
 {
 
     vec4 color = vec4(0.0,0.0,0.0,1.0);
+    if(v_texCoord[0] < border || v_texCoord[1] < border){
+        color = vec4(1.0,1.0,1.0,1.0);
+    }
+    else if(v_texCoord[0] > devicewidth - border || v_texCoord[1] > deviceheight - border){
+        color = vec4(1.0,1.0,1.0,1.0);
+    }
+
     if(getDistancePoint() < radius*radius  ){
         color = vec4(1.0,0,0,1.0);
     }

@@ -50,4 +50,8 @@ public class CustomView extends GLSurfaceView {
         customRenderer.setRadius(radius);
     }
 
+    public void setBorder(double border){
+
+    }
+
 }

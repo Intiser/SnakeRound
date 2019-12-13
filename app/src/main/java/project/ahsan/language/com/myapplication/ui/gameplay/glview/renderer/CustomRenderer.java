@@ -26,6 +26,7 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
     private Point point;
     private Point foodPoint;
     private float radius;
+    private float border;
 
     // all handles
     int programHandle;
@@ -34,6 +35,9 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
     private int mPointHandle;
     private int mFoodPointHandle;
     private int mRadiusHandle;
+    private int mBorderHandle;
+    private int mWidthHandle;
+    private int mHeightHandle;
 
     // data sizes
     private final int mPositionDataSize = 3;
@@ -64,15 +68,17 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
     };
 
     // internal variables
-    float screenWidth;
-    float screenHeight;
+    private float screenWidth;
+    private float screenHeight;
+
 
 
     public CustomRenderer(Context context, float width, float height) {
         mActivityContext = context;
         point = new Point(width / 2, height / 2);
-        foodPoint = new Point(width/4, height/4);
+        foodPoint = new Point(width / 4, height / 4);
         radius = (float) 50;
+        border = (float) 10.0;
         this.screenHeight = height;
         this.screenWidth = width;
 
@@ -222,6 +228,9 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
         mPointHandle = GLES20.glGetUniformLocation(programHandle, "control_point");
         mFoodPointHandle = GLES20.glGetUniformLocation(programHandle, "food_point");
         mRadiusHandle = GLES20.glGetUniformLocation(programHandle, "radius");
+        mBorderHandle = GLES20.glGetUniformLocation(programHandle, "border");
+        mWidthHandle = GLES20.glGetUniformLocation(programHandle, "devicewidth");
+        mHeightHandle = GLES20.glGetUniformLocation(programHandle, "deviceheight");
 
         GLES20.glUseProgram(programHandle);
 
@@ -258,6 +267,10 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
 
         GLES20.glUniform1f(mRadiusHandle, radius);
+        GLES20.glUniform1f(mBorderHandle, border);
+        GLES20.glUniform1f(mWidthHandle, screenWidth);
+        GLES20.glUniform1f(mHeightHandle, screenHeight);
+
         float[] pos1 = {(float) point.getX(), (float) point.getY()};
         GLES20.glUniform2fv(mPointHandle, 0, pos1, 0);
         float[] pos2 = {(float) foodPoint.getX(), (float) foodPoint.getY()};
@@ -297,12 +310,16 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
         this.point = point;
     }
 
-    public void setFoodPoint(Point point){
+    public void setFoodPoint(Point point) {
         this.foodPoint = point;
     }
 
-    public void setRadius(double radius){
+    public void setRadius(double radius) {
         this.radius = (float) radius;
+    }
+
+    public void setBorder(double border){
+        this.border = (float) border;
     }
 
 }

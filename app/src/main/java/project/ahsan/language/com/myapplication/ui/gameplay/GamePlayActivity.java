@@ -52,7 +52,7 @@ public class GamePlayActivity extends AppCompatActivity {
         playController = new PlayController(joystickView, customView, this);
     }
 
-    private void makeFullscreen(){
+    private void makeFullscreen() {
         View decorView = getWindow().getDecorView();
         // Hide the status bar.
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
