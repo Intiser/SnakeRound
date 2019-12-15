@@ -1,0 +1,7 @@
+[
+{
+  "directory": "E:/Android_Projects/SnakeRound/app/.cxx/cmake/debug/x86_64",
+  "command": "C:\\Users\\Intiser\\AppData\\Local\\Android\\Sdk\\ndk\\20.1.5948944\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=x86_64-none-linux-android21 --gcc-toolchain=C:/Users/Intiser/AppData/Local/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Intiser/AppData/Local/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../../gamesdk/include -I../../../../../../common/include -I../../../../src/main/cpp  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\native_lib.dir\\src\\main\\cpp\\helloworld-c.cpp.o -c E:\\Android_Projects\\SnakeRound\\app\\src\\main\\cpp\\helloworld-c.cpp",
+  "file": "E:/Android_Projects/SnakeRound/app/src/main/cpp/helloworld-c.cpp"
+}
+]

@@ -1,0 +1,15 @@
+RELEASE NOTES
+
+Version 1.0.0
+=============
+- This initial version of the Android Game SDK features the Android Frame Pacing library.
+- Features
+ - Display buffer synchronization.
+ - Auto refresh rate mode and pipelining support.
+ - Collection of frame rendering statistics.
+ - Graceful selection of behavior at runtime, depending on the presence of the Android, OpenGL,
+   and Vulkan features needed by Swappy.
+ - Static and dynamic linking of the library.
+ - Support for devices with multiple refresh rates.
+
+For more information, see https://developer.android.com/games/sdk/.

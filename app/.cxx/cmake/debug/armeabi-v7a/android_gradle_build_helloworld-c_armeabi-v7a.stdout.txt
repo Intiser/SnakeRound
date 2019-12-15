@@ -1,0 +1,12 @@
+ninja: Entering directory `E:\Android_Projects\SnakeRound\app\.cxx\cmake\debug\armeabi-v7a'
+[1/2] Building CXX object CMakeFiles/helloworld-c.dir/src/main/cpp/helloworld-c.cpp.o
+FAILED: CMakeFiles/helloworld-c.dir/src/main/cpp/helloworld-c.cpp.o 
+C:\Users\Intiser\AppData\Local\Android\Sdk\ndk\20.1.5948944\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=armv7-none-linux-androideabi21 --gcc-toolchain=C:/Users/Intiser/AppData/Local/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Intiser/AppData/Local/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dhelloworld_c_EXPORTS -I../../../../../gamesdk/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC -MD -MT CMakeFiles/helloworld-c.dir/src/main/cpp/helloworld-c.cpp.o -MF CMakeFiles\helloworld-c.dir\src\main\cpp\helloworld-c.cpp.o.d -o CMakeFiles/helloworld-c.dir/src/main/cpp/helloworld-c.cpp.o -c ../../../../src/main/cpp/helloworld-c.cpp
+../../../../src/main/cpp/helloworld-c.cpp:8:6: error: functions that differ only in their return type cannot be overloaded
+void SwappyGL_init(JNIEnv *env, jobject jactivity);
+~~~~ ^
+../../../../../gamesdk/include\swappy/swappyGL.h:46:20: note: previous definition is here
+static inline bool SwappyGL_init(JNIEnv *env, jobject jactivity)  {
+              ~~~~ ^
+1 error generated.
+ninja: build stopped: subcommand failed.

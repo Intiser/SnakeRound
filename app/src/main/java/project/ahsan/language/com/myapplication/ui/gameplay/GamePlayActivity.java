@@ -14,6 +14,10 @@ import android.view.View;
 
 public class GamePlayActivity extends AppCompatActivity {
 
+    static {
+        System.loadLibrary("native-lib");
+    }
+
 
     @BindView(R.id.joystick)
     JoystickView joystickView;
@@ -57,6 +61,8 @@ public class GamePlayActivity extends AppCompatActivity {
         // status bar is hidden, so hide that too if necessary.
 
     }
+
+
 
 
 }

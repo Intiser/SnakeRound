@@ -1,0 +1,13 @@
+# ninja log v5
+0	282	598141311	CMakeFiles/helloworld-c.dir/src/main/cpp/helloworld-c.cpp.o	73e3893c811c481f
+282	385	598141311	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libhelloworld-c.so	d6054a0828283383
+0	746	598141557	CMakeFiles/native-library.dir/src/main/cpp/helloworld-c.cpp.o	4e8e249f88c0094f
+746	1089	598141557	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-library.so	a3a3cee7e6ac172a
+3	117	598141655	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libhelloworld-c.so	d6054a0828283383
+3	641	598142025	CMakeFiles/helloworld-c.dir/src/main/cpp/helloworld-c.cpp.o	73e3893c811c481f
+641	986	598142025	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libhelloworld-c.so	6c49a1500083f854
+2	139	598142443	CMakeFiles/native_lib.dir/src/main/cpp/helloworld-c.cpp.o	7dbfb89472a0346c
+139	571	598142443	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libnative_lib.so	dbb617806a5da3e2
+1	101	598142482	CMakeFiles/native_lib.dir/src/main/cpp/helloworld-c.cpp.o	b0cfd5a3f8bd1a4e
+101	206	598142482	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libnative_lib.so	dbb617806a5da3e2
+2	108	598142562	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libnative_lib.so	819f88f0784eeb5d

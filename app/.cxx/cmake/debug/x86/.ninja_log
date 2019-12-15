@@ -1,0 +1,13 @@
+# ninja log v5
+1	99	598141311	CMakeFiles/helloworld-c.dir/src/main/cpp/helloworld-c.cpp.o	79ef868c8024c9e3
+99	400	598141312	../../../../build/intermediates/cmake/debug/obj/x86/libhelloworld-c.so	f46b01c7237fc151
+0	146	598141558	CMakeFiles/native-library.dir/src/main/cpp/helloworld-c.cpp.o	5f8e74ec66422f10
+146	476	598141558	../../../../build/intermediates/cmake/debug/obj/x86/libnative-library.so	617338d5006013a2
+2	103	598141655	../../../../build/intermediates/cmake/debug/obj/x86/libhelloworld-c.so	f46b01c7237fc151
+2	133	598142026	CMakeFiles/helloworld-c.dir/src/main/cpp/helloworld-c.cpp.o	79ef868c8024c9e3
+133	533	598142026	../../../../build/intermediates/cmake/debug/obj/x86/libhelloworld-c.so	8c44854334300c01
+0	90	598142444	CMakeFiles/native_lib.dir/src/main/cpp/helloworld-c.cpp.o	3e0be617e46ab2dc
+91	335	598142444	../../../../build/intermediates/cmake/debug/obj/x86/libnative_lib.so	32000af9c5fe3697
+2	111	598142483	CMakeFiles/native_lib.dir/src/main/cpp/helloworld-c.cpp.o	14328168dab9bdc1
+111	201	598142483	../../../../build/intermediates/cmake/debug/obj/x86/libnative_lib.so	32000af9c5fe3697
+2	152	598142563	../../../../build/intermediates/cmake/debug/obj/x86/libnative_lib.so	40879bb7c5b09f4a
