@@ -21,7 +21,7 @@ public class GeometryUtils {
         return newY;
     }
 
-    public static double getDistance(double X, double Y, double x, double y){
+    public static double getDistance(double X, double Y, double x, double y) {
         double dis1 = abs(X - x);
         dis1 = dis1 * dis1;
         double dis2 = abs(Y - y);

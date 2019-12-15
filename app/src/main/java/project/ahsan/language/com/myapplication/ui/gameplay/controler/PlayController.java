@@ -49,7 +49,7 @@ public class PlayController {
         customView.queueEvent(new Runnable() {
             @Override
             public void run() {
-
+                customView.setBorder(border);
             }
         });
 

@@ -29,6 +29,7 @@ public class CustomView extends GLSurfaceView {
 
     private void iniRenderer() {
         setEGLContextClientVersion(2);
+        //setEGLConfigChooser(8 , 8, 8, 8, 16, 0);
         float width = mContext.getResources().getDisplayMetrics().widthPixels;
         float height = (float) (mContext.getResources().getDisplayMetrics().heightPixels - ViewUtils.getPixelsFromDP(mContext,16));
         customRenderer = new CustomRenderer(mContext, width, height);

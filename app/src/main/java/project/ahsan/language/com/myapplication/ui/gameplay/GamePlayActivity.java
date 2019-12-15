@@ -3,6 +3,7 @@ package project.ahsan.language.com.myapplication.ui.gameplay;
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import io.github.controlwear.virtual.joystick.android.JoystickView;
 import project.ahsan.language.com.myapplication.R;
 import project.ahsan.language.com.myapplication.ui.gameplay.controler.PlayController;
