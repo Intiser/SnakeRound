@@ -34,6 +34,8 @@ public class GamePlayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         ButterKnife.bind(this);
         initController();
+        nInit();
+        set60FPS();
     }
 
     @Override
@@ -45,8 +47,14 @@ public class GamePlayActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
 
     }
+
 
     private void initController() {
         playController = new PlayController(joystickView, customView, this);
@@ -62,7 +70,10 @@ public class GamePlayActivity extends AppCompatActivity {
 
     }
 
+    public native void nInit();
 
+    public native void nDestory();
 
+    public native void set60FPS();
 
 }
