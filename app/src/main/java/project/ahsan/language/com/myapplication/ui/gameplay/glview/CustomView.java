@@ -52,7 +52,7 @@ public class CustomView extends GLSurfaceView {
     }
 
     public void setBorder(double border){
-
+        customRenderer.setBorder(border);
     }
 
 }

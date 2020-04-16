@@ -40,11 +40,13 @@ void main()
         color = vec4(1.0,1.0,1.0,1.0);
     }
 
-    if(getDistancePoint() < radius*radius  ){
+    if(getDistancePoint() < radius*radius ){
         color = vec4(1.0,0,0,1.0);
     }
     else if(getDistanceFood() < radius * radius){
         color = vec4(1.0,0,0,1.0);
+    }else if(getDistanceFood() < (radius+2.0)*(radius+2.0)){
+        color = vec4(1.0,0.76,0.3,1.0);
     }
 
 

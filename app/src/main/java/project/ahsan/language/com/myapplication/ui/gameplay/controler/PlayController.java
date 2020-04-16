@@ -1,6 +1,9 @@
 package project.ahsan.language.com.myapplication.ui.gameplay.controler;
 
 import android.content.Context;
+import android.os.Build;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.util.Log;
 
 import io.github.controlwear.virtual.joystick.android.JoystickView;
@@ -28,15 +31,20 @@ public class PlayController {
 
     private Context context;
 
+    Vibrator vibrator;
+
     public PlayController(JoystickView joystickView, CustomView customView, Context context) {
         this.joystickView = joystickView;
         this.customView = customView;
         this.context = context;
+        vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
         init();
         initJoystickView();
     }
 
     private void init() {
+
+
         deviceWidth = context.getResources().getDisplayMetrics().widthPixels;
         deviceHeight = context.getResources().getDisplayMetrics().heightPixels - ViewUtils.getPixelsFromDP(context, 16);
         nowX = deviceWidth / 2;
@@ -76,9 +84,9 @@ public class PlayController {
                 double dis = GeometryUtils.getDistance(foodPoint.getX(), foodPoint.getY(), nowX, nowY);
 
                 if (dis < difference) {
-                    radius = radius + 10;
-                    foodPoint = makenewPoint();
-                    updateFoodPointAndRadius(foodPoint, radius);
+
+                    gotRewardPoint();
+
                 }
 
 
@@ -92,6 +100,22 @@ public class PlayController {
 
             }
         });
+    }
+
+    void gotRewardPoint(){
+        radius = radius + 10;
+        foodPoint = makenewPoint();
+        updateFoodPointAndRadius(foodPoint, radius);
+        makeVibration();
+    }
+
+    private void makeVibration() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.EFFECT_HEAVY_CLICK));
+        } else {
+            //deprecated in API 26
+            vibrator.vibrate(500);
+        }
     }
 
     private void updateFoodPointAndRadius(Point point, double radius) {

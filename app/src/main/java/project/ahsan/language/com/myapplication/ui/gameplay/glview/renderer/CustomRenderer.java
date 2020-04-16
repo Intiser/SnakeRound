@@ -70,6 +70,8 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
     // internal variables
     private float screenWidth;
     private float screenHeight;
+    private float vibrateCount = 0;
+    private float vibratePixel = 3;
 
 
 
@@ -271,13 +273,17 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
         GLES20.glUniform1f(mWidthHandle, screenWidth);
         GLES20.glUniform1f(mHeightHandle, screenHeight);
 
-        float[] pos1 = {(float) point.getX(), (float) point.getY()};
+        float[] pos1 = {(float) point.getX() + vibratePixel, (float) point.getY()};
         GLES20.glUniform2fv(mPointHandle, 0, pos1, 0);
         float[] pos2 = {(float) foodPoint.getX(), (float) foodPoint.getY()};
         GLES20.glUniform2fv(mFoodPointHandle, 0, pos2, 0);
 
         drawSquare();
         GLES20.glFinish();
+        //vibrateCount++;
+        //if(vibrateCount == 2){
+            vibratePixel = vibratePixel * (-1);
+       // }
     }
 
     private void drawSquare() {
